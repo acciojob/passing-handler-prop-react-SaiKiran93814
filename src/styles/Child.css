@@ -1,9 +1,10 @@
-.fix-box {
-  width: 250px;
-  height: 250px;
-  margin: 20px;
-  border: 1px white dotted;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-  cursor: pointer;
+/* styles/child.css */
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  display: inline-block;
+  transition: background 0.3s ease-in-out;
 }

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import '../styles/App.css';
-import '../styles/child.css';
+import '../styles/child.css';  // ✅ Corrected path and case
 import Selection from './Selection';
 import ColourSelector from './ColourSelector';
+
 
 const colourConfig = [
   {
