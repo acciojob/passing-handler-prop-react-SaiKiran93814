@@ -1,44 +1,43 @@
 import React, { useState } from "react";
-import '../styles/App.css';
-import '../styles/child.css';  // ✅ Corrected path and case
-import Selection from './Selection';
-import ColourSelector from './ColourSelector';
-
+import "../styles/App.css";
+import "../styles/child.css";
+import Selection from "./Selection";
+import ColourSelector from "./ColourSelector";
 
 const colourConfig = [
   {
-    key: 'blue',
-    label: 'Blue',
-    classname: 'btn-blue',
-    background: 'rgb(34, 193, 195)'
+    key: "blue",
+    label: "Blue",
+    classname: "btn-blue",
+    background: "rgb(34, 193, 195)",
   },
   {
-    key: 'orange',
-    label: 'Orange',
-    classname: 'btn-orange',
-    background: 'rgb(221, 112, 18)'
+    key: "orange",
+    label: "Orange",
+    classname: "btn-orange",
+    background: "rgb(221, 112, 18)",
   },
   {
-    key: 'green',
-    label: 'Green',
-    classname: 'btn-green',
-    background: 'rgb(44, 209, 88)'
-  }
+    key: "green",
+    label: "Green",
+    classname: "btn-green",
+    background: "rgb(44, 209, 88)",
+  },
 ];
 
-const title = 'Select the gradient and then the Box to change the color';
+const title = "Select the gradient and then the Box to change the color";
 
 const App = () => {
   const [nextBackground, selectNextBackground] = useState({ background: "" });
   const [backgrounds, setBackgrounds] = useState([
     { background: "" },
     { background: "" },
-    { background: "" }
+    { background: "" },
   ]);
 
   const applyBackground = (index) => {
     const newBackgrounds = [...backgrounds];
-    newBackgrounds[index] = nextBackground;
+    newBackgrounds[index] = nextBackground; // Only that box gets new color
     setBackgrounds(newBackgrounds);
   };
 
@@ -56,7 +55,7 @@ const App = () => {
         ))}
       </div>
 
-      <div className='box-row' id="children-wrapper">
+      <div className="box-row" id="children-wrapper">
         {backgrounds.map((bg, index) => (
           <Selection
             key={index}

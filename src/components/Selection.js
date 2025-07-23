@@ -12,7 +12,7 @@ const Selection = ({ nextBackground, background, index, applyBackground }) => {
   };
 
   const applyColor = () => {
-    applyBackground(index);
+    applyBackground(index); // Set permanent color
     clearPreview();
   };
 
