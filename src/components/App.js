@@ -30,6 +30,17 @@ const title = 'Select the gradient and then the Box to change the color';
 
 const App = () => {
   const [nextBackground, selectNextBackground] = useState({ background: "" });
+  const [backgrounds, setBackgrounds] = useState([
+    { background: "" },
+    { background: "" },
+    { background: "" }
+  ]);
+
+  const applyBackground = (index) => {
+    const newBackgrounds = [...backgrounds];
+    newBackgrounds[index] = nextBackground;
+    setBackgrounds(newBackgrounds);
+  };
 
   return (
     <div id="master">
@@ -46,8 +57,14 @@ const App = () => {
       </div>
 
       <div className='box-row' id="children-wrapper">
-        {["selection1", "selection2", "selection3"].map(key => (
-          <Selection key={key} nextBackground={nextBackground} />
+        {backgrounds.map((bg, index) => (
+          <Selection
+            key={index}
+            index={index}
+            nextBackground={nextBackground}
+            background={bg}
+            applyBackground={applyBackground}
+          />
         ))}
       </div>
     </div>

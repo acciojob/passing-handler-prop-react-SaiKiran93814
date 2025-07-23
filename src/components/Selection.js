@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const Selection = ({ nextBackground }) => {
-  const [background, setBackground] = useState({ background: "" });
+const Selection = ({ nextBackground, background, index, applyBackground }) => {
   const [previewBackground, setPreviewBackground] = useState(null);
 
   const applyPreview = () => {
@@ -13,7 +12,7 @@ const Selection = ({ nextBackground }) => {
   };
 
   const applyColor = () => {
-    setBackground(nextBackground);
+    applyBackground(index);
     clearPreview();
   };
 
