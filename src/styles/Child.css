@@ -1,12 +1,12 @@
-/* 
-.box {
+
+/* .box {
   width: 100px;
   height: 100px;
   margin: 10px;
   border: 2px solid #ccc;
   display: inline-block;
   transition: background 0.3s ease-in-out;
-}
+} */
 
 
 .fix-box {
@@ -14,4 +14,4 @@
   width: 100px;
   margin: 10px;
   border: 1px solid #000;
-} */
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/Child.css'
 
 const Selection = ({ nextBackground, background, index, applyBackground }) => {
   const [previewBackground, setPreviewBackground] = useState(null);
